@@ -1,0 +1,33 @@
+﻿<Window x:Class="Gyakorló_feladat.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Gyakorló_feladat"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+		<DockPanel>
+			<StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+				<Button DockPanel.Dock="Top" Content="Adoptálás" Width="200" HorizontalAlignment="Left" Click="Adopt_Click"/>
+				<ComboBox x:Name="Combi" Width="200" SelectionChanged="ComboBox_SelectionChanged">
+					<Label Content="Nincs rendezés"/>
+					<Label Content="Rendezés név szerint ↑"/>
+					<Label Content="Rendezés név szerint ↓"/>
+					<Label Content="Rendezés kor szerint ↑"/>
+					<Label Content="Rendezés kor szerint ↓"/>
+					<Label Content="Hím egyedek"/>
+					<Label Content="Nőstény egyedek"/>
+					<Label Content="Madarak"/>
+					<Label Content="Emlősök"/>
+					<Label Content="Egysejtűek és nukleáris részecskék"/>
+					<Label Content="Kétéltűek, hüllők"/>
+				</ComboBox>
+				<Button DockPanel.Dock="Top" Content="Elaltatás :c" Width="200" HorizontalAlignment="Left" Click="Put_Down_Click"/>
+			</StackPanel>
+			<DataGrid x:Name="datagrid" IsReadOnly="True" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+		</DockPanel>
+		
+
+	</Grid>
+</Window>
